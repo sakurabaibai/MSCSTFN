@@ -85,7 +85,7 @@ class SDPA(nn.Module):
 
 
 class CSFEM(nn.Module):
-    """跨尺度特征提取模块（修正版）"""
+    """跨尺度特征提取模块"""
 
     def __init__(self, in_channels, out_channels, stride=2):
         super().__init__()
@@ -171,7 +171,7 @@ class CSFEM(nn.Module):
 
 
 class DSDRM_Block(nn.Module):
-    """深度可分离残差基础块（根据图片修改）"""
+    """深度可分离残差基础块"""
 
     def __init__(self, in_channels, out_channels, stride, expansion=6):
         super().__init__()
@@ -318,4 +318,5 @@ if __name__ == "__main__":
 
     # 前向传播
     output = model(input_tensor)
+
     print(f"Output shape: {output.shape}")  # 预期: [4, 10]
